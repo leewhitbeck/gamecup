@@ -12,7 +12,6 @@ import { FIREBASE_CONFIG } from "../config/firebase";
 import { AuthService } from "../providers/auth.service";
 import { Login } from "../pages/login/login";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RegisterModule } from "../pages/register/register.module";
 import { MenuPopoverPage } from "../pages/menu-popover/menu.popover.component";
 
@@ -31,7 +30,6 @@ import { MenuPopoverPage } from "../pages/menu-popover/menu.popover.component";
     AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule ,
     RegisterModule
   ],
   bootstrap: [IonicApp],

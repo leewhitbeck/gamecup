@@ -18,7 +18,6 @@ export class AuthService {
     {}
 
   getUser(): Observable<firebase.User> {
-    debugger;
     return this._afAuth.authState;
   }
 
