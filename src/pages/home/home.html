@@ -1,0 +1,7 @@
+<ion-content style="margin-top:60px">
+
+ <ion-item *ngFor="let user of users | async" >
+ {{user | json}}
+ </ion-item>
+
+</ion-content>

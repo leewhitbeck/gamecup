@@ -1,0 +1,35 @@
+
+<ion-content>
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col col-sm-12 col-lg-6 push-lg-3>
+        <ion-icon *ngIf="!iusAuthenticated" [name]="myIcon"></ion-icon>
+        <img id="logo-icon" *ngIf="isAuthenticated" src="{{user.photoURL}}"/>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-sm-12 col-lg-6 push-lg-3 align-self-center>
+        <form [formGroup]="myForm" (ngSubmit)="onSubmit(myForm)" novalidate>
+          <ion-item>
+            <ion-label floating>Email</ion-label>
+            <ion-input type="text" formControlName="email" name="email" required></ion-input>
+            <p *ngIf="!myForm.controls.email.valid" danger padding-left>Username</p>
+          </ion-item>
+          <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" formControlName="password" name="password" required></ion-input>
+            <p *ngIf="!myForm.controls.password.valid" danger padding-left>Password</p>
+          </ion-item>
+          <ion-item>
+            <button id="login-btn"  type="submit" ion-button full>Submit</button>
+          </ion-item>
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-sm-12 col-lg-6 push-lg-3 align-self-center>
+       <!--TODO ADD FACEBOOK, GOOGLE Logins-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

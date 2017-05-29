@@ -1,0 +1,51 @@
+{
+    "users": {
+        "111": {
+            "userName": "111",
+            "email": "leewhitbeck@gmail.com",
+            "photoURL": null
+        },
+        "222": {
+            "userName": "222",
+            "email": "jillienminera@gmail.com",
+            "photoURL": null
+        }
+    },
+    "teams": {
+        "team1": {
+            "name": "team1",
+            "description": "team1 desc",
+            "photoURL": null,
+            "players": [
+                {
+                    "111": true,
+                    "222": true
+                }
+            ]
+        }
+    },
+    "matches": {
+        "match1": {
+            "users": {
+                "111": true,
+                "222": true
+            },
+            "winner": "111",
+            "scores": [
+                "21 vs 19",
+                "21 vs 17"
+            ]
+        },
+        "match2": {
+            "players": {
+                "111": true,
+                "222": true
+            },
+            "winner": "222",
+            "scores": [
+                "21 vs 18",
+                "21 vs 15"
+            ]
+        }
+    }
+}

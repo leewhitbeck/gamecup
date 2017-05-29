@@ -1,0 +1,21 @@
+@import '../../theme/variables';
+
+page-login {
+  
+  ion-content {
+    &.ion-content {
+      background: map-get($colors, primary);
+    }
+  }
+
+  p {
+     line-height: normal;
+    border-bottom: 1px solid;
+  }
+
+a {
+    color: #237a91;
+    text-decoration: none;
+}
+
+}
