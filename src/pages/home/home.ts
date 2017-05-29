@@ -11,7 +11,8 @@ export class HomePage {
 
   authUser: firebase.User;
   teams: FirebaseListObservable<any[]>;
-  users: FirebaseListObservable<any[]>;
+  // users: FirebaseListObservable<any[]>;
+  users: any[] = [];
 
   constructor(
     public navCtrl: NavController, 
@@ -25,7 +26,23 @@ export class HomePage {
   }
 
   ionViewDidLoad() {
-    this.users = this._db.list('/users');
-  }
+   let count = 1;
 
+   for(let i = 0; i< 21; i++) {
+     this.users.push({
+       uid: count,
+       name: 'player' + count,
+       email: 'test@test.com',
+       joined: Date.now(),
+       recentActivity: Date.now(),
+       photoURL: '',
+       providerId: 'email',
+       online: true,
+       wins: Math.floor(Math.random() * 100),
+       losses: Math.floor(Math.random() * 100),
+       score: Math.floor(Math.random() * 1000)
+     })
+     count++;
+   }
+  }
 }

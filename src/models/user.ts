@@ -16,6 +16,9 @@ export interface IUserConfig {
     lat?: string;
     online: boolean;
     totalScore?: IScore;
+    score?: any;
+    wins?: any;
+    losses?: any;
 }
 
 export class User {
@@ -32,6 +35,9 @@ export class User {
     emailVerified?: boolean;
     lat?: string;
     online: boolean;
+    wins?: any;
+    losses?: any;
+    score?: any;
    
     constructor(config: IUserConfig) {
       this.uid = config.uid || null;
@@ -44,6 +50,9 @@ export class User {
       this.emailVerified = config.emailVerified || null;
       this.teams = config.teams || null;
       this.matches = config.matches || null;
+      this.wins = config.wins || null;
+      this.losses = config.losses || null;
+      this.score = config.score || null;
     }
 
 }
