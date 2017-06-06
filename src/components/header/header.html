@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar no-border-bottom>
+    <button ion-button menuToggle>
+       Score Board
+    </button>
+
+    <ion-segment >
+      <ion-segment-button value="Player">
+        Player
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Team
+      </ion-segment-button>
+    </ion-segment>
+    
+    <ion-buttons end>
+
+      <button *ngIf="!(user)?.photoURL || (user)?.photoURL === null" ion-button icon-only (click)="presentPopover($event)">
+          <ion-icon name="contact"></ion-icon>
+      </button>
+      <button *ngIf="(user)?.photoURL && (user)?.photoURL !== null" ion-button icon-only (click)="presentPopover($event)">
+         <img class='nav-photo' src="{{(user)?.photoURL}}"/>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>

@@ -16,6 +16,8 @@ export interface IUserConfig {
     lat?: string;
     online: boolean;
     totalScore?: IScore;
+    wins?:number;
+    losses?:number;
 }
 
 export class User {
@@ -32,6 +34,8 @@ export class User {
     emailVerified?: boolean;
     lat?: string;
     online: boolean;
+    wins?:number;
+    losses?:number;
    
     constructor(config: IUserConfig) {
       this.uid = config.uid || null;

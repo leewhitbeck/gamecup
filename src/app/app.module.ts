@@ -14,6 +14,7 @@ import { Login } from "../pages/login/login";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms"
 import { RegisterModule } from "../pages/register/register.module";
 import { MenuPopoverPage } from "../pages/menu-popover/menu.popover.component";
+import { HeaderModule } from "../components/header/header.module";
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MenuPopoverPage } from "../pages/menu-popover/menu.popover.component";
     AngularFireAuthModule,
     FormsModule,
     ReactiveFormsModule,
-    RegisterModule
+    RegisterModule,
+    HeaderModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

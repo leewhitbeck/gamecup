@@ -4,7 +4,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { HomePage } from '../pages/home/home';
 import { AuthService } from "../providers/auth.service";
 import { BehaviorSubject } from "rxjs/BehaviorSubject";
-import { MenuPopoverPage } from "../pages/menu-popover/menu.popover.component";
 
 @Component({
   templateUrl: 'app.html'
@@ -36,11 +35,6 @@ export class ScoreBoardApp {
     this._authService.logout();
   }
 
-   presentPopover(myEvent) {
-    let popover = this._popoverCtrl.create(MenuPopoverPage);
-    popover.present({
-      ev: myEvent
-    });
-  }
+  
 }
 

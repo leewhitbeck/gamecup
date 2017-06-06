@@ -1,6 +1,33 @@
-<ion-content style="margin-top:60px">
+<header></header>
 
- <ion-list *ngFor="let user of users | async">
-    {{user | json}}
- </ion-list>
+<ion-content padding>
+ <ion-list>
+  <ion-item-sliding *ngFor="let user of users | async">
+    <ion-item >
+      <ion-avatar item-start>
+        <img *ngIf="user.photoURL" src="{{user.photoURL}}">
+      </ion-avatar>
+      <h2>{{user.name}}</h2>
+      <p>Wins:  <span class="score wins"> {{user.wins}}</span>
+      Losses: <span class="score losses"> {{user.losses}}</span></p>
+    </ion-item>
+    <ion-item-options side="left">
+      <button ion-button color="primary">
+        <ion-icon name="text"></ion-icon>
+        Message
+      </button>
+      <button ion-button color="secondary">
+        <ion-icon name="call"></ion-icon>
+        Call
+      </button>
+    </ion-item-options>
+    <ion-item-options side="right">
+      <button ion-button color="primary">
+        <ion-icon name="pingpong"></ion-icon>
+        Challenge
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
 </ion-content>

@@ -1,3 +1,23 @@
+@import '../../theme/variables';
+
 page-home {
+  
+  ion-content {
+    top: 40px;
+  }
+
+  .score {
+    color:white;    
+    padding:10px;
+    border-radius:30%;
+  }
+
+  .wins {
+      background: map-get($colors, accent);
+  }
+
+  .losses {
+      background:map-get($colors, danger);
+  }
 
 }
